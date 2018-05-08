@@ -1,0 +1,168 @@
+body{
+  background: #111125;
+  color: #a0a0a0;
+  font-family: "Suravaram", serif;
+  font-size: 18px;
+  cursor: default;
+}
+
+
+hr{
+  border-color: #a0a0a0;
+}
+
+.title{
+  color: #a8a8a8;
+  text-align: center;
+  font-size: 220%;
+  margin: 20px;
+  height: 50px;
+}
+
+#page-container{
+  width: 95%;
+  margin-top: 40px;
+}
+
+.row{
+  margin-bottom: 20px;
+}
+
+.article-box{
+  background: #2f2f2f;
+  color: #a8a8a8;
+  border-style: solid;
+  border-color: #a0a2a9;
+  margin-bottom: 10%;
+  border-radius: 1%;
+  padding: 5%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.article-box:hover{
+  cursor: pointer;
+}
+
+
+.title-frame{
+  height: 40%;
+  
+}
+
+.article-title{
+  margin: auto;
+  text-align: center;
+  font-size: 130%;
+  height: 45%;
+}
+
+.article-source{
+  font-size: 80%;
+  padding-top: 10%;
+}
+
+.image-box{
+  
+  background-image: url("");
+  background: #0a0a0a;
+  background-size: contain;
+  margin: auto;
+  border-radius: 5%;
+  overflow: hidden;
+  max-height: 30%;
+}
+
+.img-fluid{
+  border-radius: 5%;
+}
+
+
+.article-date{
+  font-size: 80%;
+}
+
+.article-description{
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.navigation-bar{
+  position: fixed;
+  top: 0%;
+  background: RGBA(10, 10, 10, 60%);
+  height: 30px;
+}
+
+#searchbox{
+  top: 1%;
+  font-size: 12px;
+  background-color: RGBA(90, 90, 90, 50%);
+  border-style: none;
+  width: 110px;
+  height: 18px;
+  color: #aeaeae;
+}
+
+#page-buttons{
+  position: fixed;
+  top: 6%;
+  display: none;
+}
+.page-btn{
+  font-size: 16px;
+  color: #aeaeae;
+  background: none;
+}
+
+.page-btn:hover{
+  color: #eeeeee;
+}
+.page-btn:active, .page-btn:focus{
+  color: #eeeeee;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.page-btn:disabled{
+  color: #444444 !important;
+}
+
+.subtext-info{
+  font-size: 12px;
+}
+
+
+.sourcedate-frame{
+  height: 30%;
+}
+
+#destination-list{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+
+.destination {
+ padding: 20px; 
+}
+destination:hover{
+  color: #fff;
+}
+
+.credits-text{
+  margin-left: 20px;
+}
+
+#set-location{
+  position: absolute;
+  left: 89%;
+  color: #666;
+}
+
+#page-top{
+  position: absolute;
+  left: 97%;
+  top: 2%;
+  color: #666;
+}
