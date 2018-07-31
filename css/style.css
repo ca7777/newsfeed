@@ -97,7 +97,7 @@ hr{
   height: 30px;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 50%;
+  font-size: 1vw;
 }
 
 #searchbox{
