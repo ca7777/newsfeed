@@ -44,6 +44,10 @@ hr{
   cursor: pointer;
 }
 
+.col{
+  min-width: 300px; 
+}
+
 
 .title-frame{
   height: 40%;
