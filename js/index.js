@@ -17,7 +17,7 @@ function setLocation(newLoc){
 function populatePage(num){
   
   
-    $("#row-0").append('<div class="col-md-3"><div class="article-box" id="article-' + num + '"><div class="title-frame"><div class="article-title" id="article-' + num + '-title"></div><div class="sourcedate-frame"><div class="article-source" id="article-' + num + '-source"></div><div class="article-date" id="article-' + num + '-date"></div></div><hr></div><div class="image-box" id="article-' + num + '-image"></div><br><div class="article-description" id="article-' + num + '-description"></div></div></div>');
+    $("#row-0").append('<div class="col"><div class="article-box" id="article-' + num + '"><div class="title-frame"><div class="article-title" id="article-' + num + '-title"></div><div class="sourcedate-frame"><div class="article-source" id="article-' + num + '-source"></div><div class="article-date" id="article-' + num + '-date"></div></div><hr></div><div class="image-box" id="article-' + num + '-image"></div><br><div class="article-description" id="article-' + num + '-description"></div></div></div>');
  
   
 }
