@@ -37,15 +37,12 @@ hr{
   border-radius: 1%;
   padding: 5%;
   height: 600px;
+  min-width: 300px;
   overflow: hidden;
 }
 
 .article-box:hover{
   cursor: pointer;
-}
-
-.col{
-  min-width: 300px; 
 }
 
 
