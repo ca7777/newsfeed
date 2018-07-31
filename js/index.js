@@ -2,17 +2,15 @@
   var newsUrl = "https://newsapi.org/v2/top-headlines?country=us&pageSize=20&page=1&sortBy=popularity&apiKey=8baae84ab6274d09812004b7a722765c";  
   var pageNum = 1;
   var usrLocation = "Detroit";
+  var todayDate = new Date();
+  var lastWeekRaw = (todayDate - (24*60*60*1000*7));
+  var lastWeek = formatDate(lastWeekRaw);
   
 function getLocation(){
   return usrLocation;
 }
 
-function setLocation(newLoc){
-  
-  if (typeof newLoc === "string"){
-    usrLocation = newLoc;
-  }
-}
+
   
 function populatePage(num){
   
@@ -96,12 +94,27 @@ function listSources(){
   });
 }
 
+function setLocation(newLoc){
+  
+  if (typeof newLoc === "string"){
+    usrLocation = newLoc;
+      
+    
+      pageNum = 1; 
+      depopulatePage();
+      document.getElementById("page-buttons").style.display = "block";
+        $("#title-text").html(usrLocation + " News" + "<br><div class='subtext-info'>Page " + pageNum + "</div>");
+        newsUrl = "https://newsapi.org/v2/everything?q=" + usrLocation + "&pageSize=20&page=1&sortBy=popularity&from=" + lastWeek + "&apiKey=8baae84ab6274d09812004b7a722765c";
+        
+      getArticles(newsUrl);
+  }
+}
+
+
 $(document).ready(function(){
 
   var totalResults = 0;
-  var todayDate = new Date();
-  var lastWeekRaw = (todayDate - (24*60*60*1000*7));
-  var lastWeek = formatDate(lastWeekRaw);
+
   getArticles(newsUrl);
   var searchterm = "";
   $("#page-container").on("click", ".article-box", function(){
