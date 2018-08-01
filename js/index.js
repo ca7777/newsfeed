@@ -38,7 +38,6 @@ function formatDate(date) {
 }
 
 function getArticles(newsUrl){
-  console.log(newsUrl);
   $.getJSON(newsUrl, function(data){
     
     for (var i=0; i<data.articles.length; i++){
@@ -89,7 +88,6 @@ function listSources(){
   
   $.getJSON(url, function(data){
     for (var i=0; i<data.sources.length; i++){
-     console.log(data.sources[i].name); 
     }
   });
 }
@@ -117,10 +115,25 @@ $(document).ready(function(){
 
   getArticles(newsUrl);
   var searchterm = "";
+	
+	
   $("#page-container").on("click", ".article-box", function(){
-    
     var target = this.id;
-    var targInt = Number.parseInt(target.charAt(target.length-1), 10);
+    var targInt = 0 //Number.parseInt(target.charAt(target.length-2), 10);
+	var targStr = ""  
+	
+	  for (var i=0; i<target.length; i++){
+		let part = Number.parseInt(target.charAt(i), 10);
+		  if (!isNaN(part)){
+			
+			let stringpart = part.toString();
+			
+			targStr+=stringpart;
+		  }
+	  }
+	  
+	targInt = targStr.valueOf();
+	  
     window.open(urlArr[targInt]);
     
   });
@@ -181,10 +194,7 @@ $(document).ready(function(){
     
     $(".subtext-info").text("Page " + pageNum);
     depopulatePage();
-    getArticles(newUrl);
-    console.log(urlArr.length);
-    console.log("pp: " + (20 * pageNum));
-       
+    getArticles(newUrl);   
   });
   
   $(".destination").on("click", function(){
